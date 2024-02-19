@@ -1,5 +1,4 @@
-import { Context } from "https://deno.land/x/oak@v5.0.0/mod.ts";
-
+import { Context } from "https://deno.land/x/oak@v13.2.5/context.ts";
 class IndexRoute {
   async hello(ctx: Context) {
     ctx.response.body = "hello";

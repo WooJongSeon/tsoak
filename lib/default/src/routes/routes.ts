@@ -1,5 +1,5 @@
-import { Router } from "https://deno.land/x/oak@v5.0.0/mod.ts";
-import { Context } from "https://deno.land/x/oak@v5.0.0/mod.ts";
+import { Router } from "https://deno.land/x/oak@v13.2.5/router.ts";
+import { Context } from "https://deno.land/x/oak@v13.2.5/context.ts";
 
 import indexRoutes from "./index.routes.ts";
 import userRoutes from "./users.routes.ts";

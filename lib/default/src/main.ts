@@ -1,8 +1,7 @@
-import { Application } from "https://deno.land/x/oak@v5.0.0/mod.ts";
-
+import { Application } from "https://deno.land/x/oak@v13.2.5/application.ts";
 import { oakCors } from "https://deno.land/x/cors/mod.ts";
 import { router } from "./routes/routes.ts";
-import { Context } from "https://deno.land/x/oak@v5.0.0/mod.ts";
+import { Context } from "https://deno.land/x/oak@v13.2.5/context.ts";
 
 const port = 8000;
 const app = new Application<Context>();
