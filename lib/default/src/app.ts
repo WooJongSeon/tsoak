@@ -1,23 +1,15 @@
-import * as Koa from 'koa';
-import * as bodyParser from 'koa-bodyparser';
-import * as cors from '@koa/cors';
-import * as helmet from 'koa-helmet';
-import * as json from 'koa-json';
-import * as logger from 'koa-logger';
-import 'reflect-metadata';
-import router from './server';
+import { Application } from "https://deno.land/x/oak@v5.0.0/mod.ts";
 
-const app = new Koa();
-const port = process.env.PORT || 3000;
+import { oakCors } from "https://deno.land/x/cors/mod.ts";
+import { router } from "./routes/routes.ts";
+import { Context } from "https://deno.land/x/oak@v5.0.0/mod.ts";
 
-app.use(helmet());
-app.use(cors());
-app.use(json());
-app.use(logger());
-app.use(bodyParser());
+const port = 8000;
+const app = new Application<Context>();
 
-app.use(router.routes()).use(router.allowedMethods());
+app.use(oakCors());
 
-app.listen(port, () => {
-  console.log(`🚀 App listening on the port ${port}`);
-});
+app.use(router.routes());
+app.use(router.allowedMethods());
+
+await app.listen({ port });

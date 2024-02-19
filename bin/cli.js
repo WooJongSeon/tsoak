@@ -2,7 +2,7 @@
 
 /*****************************************************************
  * Create new tsoak project.
- * created by Lim Kyungmin, 01/02/2020
+ * created by Woo Jong Seon, 02/19/2024
  *****************************************************************/
 
 const path = require("path");
