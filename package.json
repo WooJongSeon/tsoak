@@ -6,16 +6,16 @@
   "license": "MIT",
   "main": "bin/cli.js",
   "keywords": [
-    "koa",
-    "jest",
+    "deno",
+    "oak",
     "typescript"
   ],
   "bin": {
-    "dets": "bin/cli.js"
+    "tsoak": "bin/cli.js"
   },
   "scripts": {
     "start": "node bin/cli.js",
-    "dets": "node bin/cli.js"
+    "tsoak": "node bin/cli.js"
   },
   "dependencies": {
     "chalk": "^3.0.0",
@@ -26,10 +26,10 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/WooJongSeon/dets.git"
+    "url": "git+https://github.com/WooJongSeon/tsoak.git"
   },
   "bugs": {
-    "url": "https://github.com/WooJongSeon/dets/issues"
+    "url": "https://github.com/WooJongSeon/tsoak/issues"
   },
-  "homepage": "https://github.com/WooJongSeon/dets#readme"
+  "homepage": "https://github.com/WooJongSeon/tsoak#readme"
 }
